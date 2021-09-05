@@ -6,7 +6,9 @@ import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { SignUp } from './components/SignUp';
-import img from './assests/personImage.jpg'
+import { SignIn } from "./components/SignIn";
+import { EmployeeForm } from "./components/EmployeeForm";
+import img from './assests/personImage.jpg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getSteps() {
-  return ['Sign Up', 'Login', 'Update Details'];
+  return ['Sign Up', 'Login', 'Add Details'];
 }
 
 function getStepContent(stepIndex) {
@@ -52,11 +54,16 @@ function getStepContent(stepIndex) {
     case 1:
       return (
         <div>
-          Login Side
+          <SignIn />
         </div>
+        
       );
     case 2:
-      return 'Testing';
+      return (
+        <div>
+          <EmployeeForm />
+        </div>
+      );
     default:
       return 'Unknown stepIndex';
   }

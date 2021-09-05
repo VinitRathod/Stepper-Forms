@@ -1,0 +1,62 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.sign_main {
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.headdTag {
+    margin-left: 43%;
+    font-weight: 500;
+    color: #012443;
+    /* margin-top: 7rem; */
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.inLabel {
+    color: #B61919;
+    margin-bottom: 0.1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.inInp {
+    width: 55%;
+    padding: 1rem;
+    border-radius: 15px;
+    border: none;
+    height: 2.5rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.inCol {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15rem;
+    margin-top: 2rem;
+}
+
+.fpswd {
+    margin-top: 0.5rem;
+    margin-left: 52%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #012443;
+}
+
+.sBtn {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: "#FDD2BF";
+    background-color: #B61919;
+    color: #FDD2BF;
+    margin-top: 2rem;
+    padding: 0.5rem 1.7rem;
+    border-radius: 5px;
+    border: none;
+    margin-left: 32%;
+}
