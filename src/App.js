@@ -5,10 +5,10 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { SignUp } from './components/SignUp';
-import { SignIn } from "./components/SignIn";
-import { EmployeeForm } from "./components/EmployeeForm";
-import img from './assests/personImage.jpg';
+import { Info } from './components/Info';
+import { Quiz } from "./components/Quiz";
+import { Final } from "./components/Final";
+import info from '../src/assests/info.jpg'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,45 +23,58 @@ const useStyles = makeStyles((theme) => ({
     },
     },
   backButton: {
-    marginRight: theme.spacing(1),
+    marginRight: theme.spacing(2),
+    marginBottom: theme.spacing(4)
   },
   instructions: {
-    marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(1),
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
   },
+  reset:{
+    marginLeft: theme.spacing(37),
+    marginBottom: theme.spacing(3),
+    border: "1px solid #999",
+    "& .MuiStepIcon-root.MuiStepIcon-active": {
+      color: "red",
+    }
+  },
+  last:{
+    marginTop: theme.spacing(4),
+    marginLeft: theme.spacing(33),
+    marginBottom: theme.spacing(3)
+  }
 }));
 
 function getSteps() {
-  return ['Sign Up', 'Login', 'Add Details'];
+  return ['Information', 'Wizardy world', 'Final'];
 }
 
 function getStepContent(stepIndex) {
   switch (stepIndex) {
     case 0:
       return (
-      
-    <div className="container mt-3">
-      <div className="row">
-        <div className="col-md-5">
-          <SignUp />
+        <div><h1 className="me-auto" style={{marginLeft:"9rem",marginBottom:"2rem"}}>Tell us about yourself!</h1>
+          <div className="row">
+            <div className="col-md-6">
+              <Info />
+            </div>
+            <div className="col-md-6" style={{marginTop:"2rem"}}>
+              <img src={info} width="220px" height="150px" alt="img not found" className="img-fluid w-100"/>
+            </div>
+          </div>
         </div>
-        <div className="col-md-7">
-          <img className="img-fluid vector-img w-100" src={img} alt="" />
-        </div>
-      </div>
-    </div>
       );
     case 1:
       return (
         <div>
-          <SignIn />
+          <Quiz />
         </div>
         
       );
     case 2:
       return (
         <div>
-          <EmployeeForm />
+          <Final />
         </div>
       );
     default:
@@ -98,8 +111,8 @@ export default function HorizontalLabelPositionBelowStepper() {
       <div>
         {activeStep === steps.length ? (
           <div>
-            <Typography className={classes.instructions}>All steps completed</Typography>
-            <Button onClick={handleReset}>Reset</Button>
+            <Typography className={classes.last}>All steps completed</Typography>
+            <Button onClick={handleReset} className={classes.reset}>Reset</Button>
           </div>
         ) : (
           <div>
@@ -112,7 +125,7 @@ export default function HorizontalLabelPositionBelowStepper() {
               >
                 Back
               </Button>
-              <Button variant="contained" color="primary" onClick={handleNext}>
+              <Button variant="contained" color="primary" onClick={handleNext} className={classes.backButton}>
                 {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
               </Button>
             </div>

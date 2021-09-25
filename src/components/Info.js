@@ -3,7 +3,7 @@ import { Formik,Form } from 'formik';
 import { TextField } from './TextField'
 import * as Yup from 'yup';
 
-export const SignUp = () =>{
+export const Info = () =>{
     const validate = Yup.object({
         firstname: Yup.string()
             .max(25,"Must be 25 character of less")
@@ -43,18 +43,14 @@ export const SignUp = () =>{
 
             {formik => (
                 <div>
-                    <h1 className="my-4">Sign Up</h1>
+
                     {console.log(formik.values)}
-                    <Form>
+                    <Form style={{marginLeft:"4rem"}}>
                         <TextField label="First Name" name="firstname" type="text" />
-                        <TextField label="Last Name" name="lastname" type="text" />
-                        <TextField label="Email" name="email" type="email" />
-                        <TextField label="Contact" name="contact" type="text" />
-                        <TextField label="Address" name="address" type="textarea" />
                         <TextField label="Age" name="age" type="number" />
-                        <TextField label="College" name="clg" type="text" />
-                        <button className="btn btn-primary mt-3" type="submit">Submit</button>
-                        <button className="btn btn-danger mt-3 ml-3" type="reset">Reset</button>
+                        <TextField label="Email" name="email" type="email" />
+                        <TextField label="Interests" name="interest" type="text" />
+                        {/* <button className="btn btn-primary mt-3 mb-3" type="submit">Submit</button>                    */}
                     </Form>
                 </div>
             )}
