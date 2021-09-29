@@ -45,6 +45,11 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+var styles = {
+  marginRight:'16px',
+  marginBottom: '32px',
+};
+
 function getSteps() {
   return ['Information', 'Wizardy world', 'Final'];
 }
@@ -125,9 +130,9 @@ export default function HorizontalLabelPositionBelowStepper() {
               >
                 Back
               </Button>
-              <Button variant="contained" color="primary" onClick={handleNext} className={classes.backButton}>
-                {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-              </Button>
+              <input type="submit" value={activeStep === steps.length - 1 ? 'Finish' : 'Next'} variant="contained" color="primary" onClick={handleNext} className="btn btn-primary" style={styles} />
+                {/* {activeStep === steps.length - 1 ? 'Finish' : 'Next'} */}
+              {/* </Button> */}
             </div>
           </div>
         )}
