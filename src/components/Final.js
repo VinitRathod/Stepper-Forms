@@ -14,7 +14,7 @@ export const Final = () => {
     },
   });
   return (
-    <div>
+  <div>
     <h2  style={{marginLeft:"13rem"}}>Paved the way</h2>
     <div style={{margin:"0 8rem"}}>
        <div ><h5>1 .james and lily potter</h5></div>
