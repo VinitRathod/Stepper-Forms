@@ -20,7 +20,7 @@
 }
 
 .inLabel {
-    color: #B61919;
+    color: crimson;
     margin-bottom: 0.1rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -52,7 +52,7 @@
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: "#FDD2BF";
-    background-color: #B61919;
+    background-color: crimson;
     color: #FDD2BF;
     margin-top: 2rem;
     padding: 0.5rem 1.7rem;
