@@ -8,35 +8,35 @@ export const Info = () =>{
         firstname: Yup.string()
             .max(25,"Must be 25 character of less")
             .required("Required"),
-        lastname: Yup.string()
-            .max(25,"Must be 25 character of less")
-            .required("Required"),
+        // lastname: Yup.string()
+        //     .max(25,"Must be 25 character of less")
+        //     .required("Required"),
         email: Yup.string()
             .email("Email is Invalid")
             .max(150,"Must be less than or equal to 150 characters")
             .required("Required"),
-        contact: Yup.string()
-            .max(25,"Must be 25 character of less")
-            .required("Required"),
-        address: Yup.string()
-            .max(200,"Must be 200 or less than 200")
-            .required("Required"),
+        // contact: Yup.string()
+        //     .max(25,"Must be 25 character of less")
+        //     .required("Required"),
+        // address: Yup.string()
+        //     .max(200,"Must be 200 or less than 200")
+        //     .required("Required"),
         age: Yup.number()
             .required("Required"),
-        clg: Yup.string()
-            .max(25,"Must be 25 character of less")
+        // clg: Yup.string()
+        //     .max(25,"Must be 25 character of less")
+        //     .required("Required"),
+        interest: Yup.string()
+            .max(350,"Must be 350 characters or less")
             .required("Required"),
     })
     return(
         <Formik
             initialValues={{
                 firstname:'',
-                lastname:'',
                 email:'',
-                contact:'',
-                address:'',
                 age:'',
-                clg:''
+                interest:''
             }}
             validationSchema={validate}
         >
